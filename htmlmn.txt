@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang web của tôi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Element & ID Selector -->
+        <h1 id="main-title">Trang web của tôi</h1>
+
+        <!-- Element Selector -->
+        <p class="description">
+            Xin chào! Tôi là một học viên lập trình đang tìm hiểu về các bộ chọn trong CSS để xây dựng giao diện web.
+        </p>
+
+        <!-- Element & Class Selector -->
+        <h2>Sở thích của tôi</h2>
+        <ul class="hobby-list">
+            <li class="hobby-item">Đọc sách công nghệ</li>
+            <li class="hobby-item">Chơi thể thao</li>
+            <li class="hobby-item">Lập trình web</li>
+        </ul>
+
+        <!-- Element Selector & Pseudo-class :hover -->
+        <button class="btn-action">Nhấn vào đây</button>
+    </div>
+
+</body>
+</html>/* 1. Element Selector - Đổi màu nền của toàn bộ trang */
+body {
+    background-color: #f0f4f8;
+    font-family: Arial, sans-serif;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Class Selector - Khung chứa nội dung */
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+/* 2. ID Selector - Căn giữa tiêu đề <h1> */
+#main-title {
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+
+/* Class Selector - Đoạn văn mô tả */
+.description {
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* Grouping Selector - Định dạng chung cho danh sách */
+.hobby-list {
+    list-style-type: square;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+/* 3. Class Selector - Định dạng danh sách sở thích với màu sắc khác nhau */
+.hobby-item:nth-child(1) {
+    color: #e11d48; /* Màu đỏ hồng */
+    font-weight: bold;
+}
+
+.hobby-item:nth-child(2) {
+    color: #2563eb; /* Màu xanh dương */
+    font-weight: bold;
+}
+
+.hobby-item:nth-child(3) {
+    color: #16a34a; /* Màu xanh lá */
+    font-weight: bold;
+}
+
+/* Class Selector - Nút bấm mặc định */
+.btn-action {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* 4. Pseudo-class Selector - Hiệu ứng Hover cho nút bấm */
+.btn-action:hover {
+    background-color: #1d4ed8;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4);
+}
